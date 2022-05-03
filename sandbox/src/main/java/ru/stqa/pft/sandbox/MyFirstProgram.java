@@ -15,7 +15,7 @@ public class MyFirstProgram {
 
 		Point p1 = new Point(0.15, -89.25);
 		Point p2 = new Point(-55.89, 400);
-		System.out.println("Расстояние между точками А(" + p1.x + ", " + p1.y + ") и В(" + p2.x + ", " + p2.y + ") равно " + Math.sqrt(Math.pow((p2.x() - p1.x()), 2) + Math.pow((p2.y() - p1.y()), 2)));
+		System.out.println("Расстояние между точками А(" + p1.x + ", " + p1.y + ") и В(" + p2.x + ", " + p2.y + ") равно " + Math.sqrt(Math.pow((p2.getX() - p1.getX()), 2) + Math.pow((p2.getY() - p1.getY()), 2)));
 
 	}
 

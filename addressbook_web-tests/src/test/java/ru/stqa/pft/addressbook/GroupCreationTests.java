@@ -13,12 +13,7 @@ public class GroupCreationTests {
   public void setUp() throws Exception {
     System.setProperty("webdriver.chrome.driver", "C:/Windows/System32/chromedriver.exe");
     wd = new ChromeDriver();
-
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-  }
-
-  @Test
-  public void testGroupCreation() throws Exception {
     wd.get("http://localhost/addressbook/group.php");
     wd.findElement(By.name("user")).click();
     wd.findElement(By.name("user")).clear();
@@ -28,6 +23,10 @@ public class GroupCreationTests {
     wd.findElement(By.name("pass")).sendKeys("secret");
     wd.findElement(By.xpath("//input[@value='Login']")).click();
     wd.findElement(By.xpath("//div[@id='content']/form/input[4]")).click();
+  }
+
+  @Test
+  public void testGroupCreation() throws Exception {
     wd.findElement(By.name("group_name")).click();
     wd.findElement(By.name("group_name")).clear();
     wd.findElement(By.name("group_name")).sendKeys("New Test");

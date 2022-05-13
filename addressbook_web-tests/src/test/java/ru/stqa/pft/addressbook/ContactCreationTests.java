@@ -16,7 +16,6 @@ public class ContactCreationTests {
   public void setUp() throws Exception {
     System.setProperty("webdriver.chrome.driver", "C:/Windows/System32/chromedriver.exe");
     wd = new ChromeDriver();
-    baseUrl = "https://www.google.com/";
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 

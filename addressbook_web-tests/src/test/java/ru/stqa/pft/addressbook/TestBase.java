@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
-  private WebDriver wd;
+  public WebDriver wd;
 
   @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
@@ -88,5 +88,13 @@ public class TestBase {
     } catch (NoAlertPresentException e) {
       return false;
     }
+  }
+
+  protected void deleteSelectedGroups() {
+    wd.findElement(By.name("delete")).click();
+  }
+
+  protected void selectGroup() {
+    wd.findElement(By.name("selected[]")).click();
   }
 }

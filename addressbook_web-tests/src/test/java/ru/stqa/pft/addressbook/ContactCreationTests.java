@@ -1,11 +1,17 @@
 package ru.stqa.pft.addressbook;
 
 
-import java.util.concurrent.TimeUnit;
-import org.testng.annotations.*;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
 
 
 public class ContactCreationTests {
@@ -32,7 +38,7 @@ public class ContactCreationTests {
   }
 
   @Test
-  public void testContactCreation() throws Exception {
+  public void testContactCreation() {
     initContactCreation();
     fillContactForm(new ContactData("Anna", "Maria", "Leonidova", "Leo", "lll@mail.ru", "1", "January", "1989", "Moscow, Red Square, 3", "+79998887766"));
     submitContactCreation();

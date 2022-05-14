@@ -37,8 +37,12 @@ public class ContactCreationTests {
     fillContactForm(new ContactData("Anna", "Maria", "Leonidova", "Leo", "lll@mail.ru", "1", "January", "1989", "Moscow, Red Square, 3", "+79998887766"));
     submitContactCreation();
     returnToContactsList();
+    logout();
   }
 
+  private void logout() {
+    wd.findElement(By.linkText("Logout")).click();
+  }
   private void returnToContactsList() {
     wd.findElement(By.linkText("home")).click();
     wd.get("http://localhost/addressbook/");

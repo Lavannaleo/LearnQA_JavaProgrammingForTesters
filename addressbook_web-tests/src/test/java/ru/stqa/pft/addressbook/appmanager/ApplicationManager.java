@@ -12,6 +12,7 @@ public class ApplicationManager {
   private SessionHelper sessionHelper;
   private NavigationHelper navigationHelper;
   private GroupHelper groupHelper;
+  private ContactHelper contactHelper;
 
   public void init() {
     System.setProperty("webdriver.chrome.driver", "C:/Windows/System32/chromedriver.exe");
@@ -34,6 +35,9 @@ public class ApplicationManager {
     wd.quit();
   }
 
+  public ContactHelper getContactHelper() {
+    return contactHelper;
+  }
   public GroupHelper getGroupHelper() {
     return groupHelper;
   }

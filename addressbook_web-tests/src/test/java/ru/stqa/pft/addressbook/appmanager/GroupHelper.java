@@ -11,10 +11,12 @@ public class GroupHelper extends HelperBase {
   }
 
   public void returnToGroupPage() {
+
     click(By.linkText("group page"));
   }
 
   public void submitGroupCreation() {
+
     click(By.name("submit"));
   }
 
@@ -25,14 +27,17 @@ public class GroupHelper extends HelperBase {
   }
 
   public void initGroupCreation() {
+
     click(By.name("new"));
   }
 
   public void deleteSelectedGroups() {
+
     click(By.name("delete"));
   }
 
   public void selectGroup() {
+
     click(By.name("selected[]"));
   }
 }

@@ -11,7 +11,6 @@ public class ContactHelper extends HelperBase{
 
   public void initContactCreation() {
     click(By.linkText("add new"));
-    wd.get("http://localhost/addressbook/edit.php");
   }
   public void returnToContactsList() {
     click(By.linkText("home"));

@@ -21,6 +21,7 @@ public class ApplicationManager {
     wd.get("http://localhost/addressbook/group.php");
     sessionHelper = new SessionHelper(wd);
     navigationHelper = new NavigationHelper(wd);
+    contactHelper = new ContactHelper(wd);
     groupHelper = new GroupHelper(wd);
     sessionHelper.login("admin", "secret");
   }

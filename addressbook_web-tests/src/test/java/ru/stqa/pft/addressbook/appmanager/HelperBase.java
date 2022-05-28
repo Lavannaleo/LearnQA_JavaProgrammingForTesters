@@ -28,7 +28,6 @@ public class HelperBase {
     click(locator);
     Select dropdown = new Select(wd.findElement(locator));
     dropdown.selectByVisibleText(text);
-    wd.findElement(locator).sendKeys(text);
   }
 
   private boolean isAlertPresent() {

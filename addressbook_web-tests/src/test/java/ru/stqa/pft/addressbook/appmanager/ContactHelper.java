@@ -36,9 +36,9 @@ public class ContactHelper extends HelperBase{
     type(By.name("lastname"),contactData.getLastname());
     type(By.name("nickname"),contactData.getNickname());
     type(By.name("email"),contactData.getEmail());
- //   selectInList(By.name("bday"),contactData.getBday());
- //   selectInList(By.name("bmonth"),contactData.getBmonth());
- //   selectInList(By.name("byear"),contactData.getByear());
+    selectInList(By.name("bday"),contactData.getBday());
+    selectInList(By.name("bmonth"),contactData.getBmonth());
+    type(By.name("byear"),contactData.getByear());
     type(By.name("address2"),contactData.getAddress2());
     type(By.name("phone2"),contactData.getPhone2());
   }

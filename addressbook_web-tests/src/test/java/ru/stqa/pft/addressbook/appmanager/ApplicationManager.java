@@ -24,12 +24,12 @@ public class ApplicationManager {
   }
 
   public void init() {
-    if (browser.equals(BrowserType.CHROME)) {
+    if (browser == BrowserType.CHROME) {
  //     System.setProperty("webdriver.chrome.driver", "C:/Windows/System32/chromedriver.exe");
       wd = new ChromeDriver();
-    } else if (browser.equals(BrowserType.FIREFOX)) {
+    } else if (browser == BrowserType.FIREFOX) {
       wd = new FirefoxDriver();
-    } else if (browser.equals(BrowserType.IE)) {
+    } else if (browser == BrowserType.IE) {
       wd = new InternetExplorerDriver();
     }
 

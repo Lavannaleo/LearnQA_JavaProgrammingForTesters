@@ -30,6 +30,11 @@ public class ContactHelper extends HelperBase{
     click(By.xpath("//div[@id='content']/form/input[21]"));
   }
 
+  public void submitContactModification() {
+
+    click(By.xpath("//div[@id='content']/form/input[22]"));
+  }
+
   public void fillContactForm(ContactData contactData) {
     type(By.name("firstname"),contactData.getFirstname());
     type(By.name("middlename"),contactData.getMiddlename());

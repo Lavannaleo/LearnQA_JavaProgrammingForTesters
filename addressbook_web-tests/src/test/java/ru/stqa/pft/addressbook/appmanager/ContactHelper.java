@@ -43,7 +43,7 @@ public class ContactHelper extends HelperBase{
     type(By.name("phone2"),contactData.getPhone2());
   }
 
-  public void selectFirstContact() {
-    click(By.id("1"));
+  public void selectContact() {
+    click(By.name("selected[]"));
   }
 }

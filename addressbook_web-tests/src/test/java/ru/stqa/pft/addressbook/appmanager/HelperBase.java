@@ -5,6 +5,7 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 public class HelperBase {
@@ -33,6 +34,15 @@ public class HelperBase {
     click(locator);
     Select dropdown = new Select(wd.findElement(locator));
     dropdown.selectByVisibleText(text);
+  }
+
+  public boolean isElementPresent(By locator) {
+    try {
+      wd.findElement(locator);
+      return true;
+    } catch (NoSuchElementException ex) {
+      return false;
+    }
   }
 
   private boolean isAlertPresent() {

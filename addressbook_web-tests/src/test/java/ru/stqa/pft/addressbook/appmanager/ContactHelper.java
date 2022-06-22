@@ -48,8 +48,8 @@ public class ContactHelper extends HelperBase{
     type(By.name("phone2"),contactData.getPhone2());
   }
 
-  public void selectContact() {
-    click(By.name("selected[]"));
+  public void selectContact(int index) {
+    wd.findElements(By.name("selected[]")).get(index).click();
   }
 
   public boolean isThereAContact() {

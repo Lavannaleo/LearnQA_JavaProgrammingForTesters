@@ -20,6 +20,7 @@ public class ContactModificationTests extends TestBase{
     app.getContactHelper().submitContactModification();
     app.getContactHelper().returnToContactsList();
     int after = app.getContactHelper().getContactCount();
+
     Assert.assertEquals(after, before);
     app.logout();
 

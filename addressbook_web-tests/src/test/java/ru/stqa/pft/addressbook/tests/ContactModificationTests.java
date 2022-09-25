@@ -1,28 +1,42 @@
 package ru.stqa.pft.addressbook.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 
-public class ContactModificationTests extends TestBase{
+import java.util.Comparator;
+import java.util.List;
 
-  @Test (enabled = false)
-  public void testContactModification() {
+public class ContactModificationTests extends TestBase{
+  @BeforeMethod
+  public void ensureContact() {
     app.getContactHelper().returnToContactsList();
     if (! app.getContactHelper().isThereAContact()) {
       app.getContactHelper().createContact(new ContactData("Anna", "Maria", "Leonidova", "Leo", "lll@mail.ru", "1", "January", "1989", "Moscow, Red Square, 3", "+79998887766"));
     }
     app.getContactHelper().returnToContactsList();
-    int before = app.getContactHelper().getContactCount();
-    app.getContactHelper().selectContact(before - 1);
-    app.getContactHelper().initContactModification();
-    app.getContactHelper().fillContactForm(new ContactData("Annabella", "", "Leonova", "Leo", "lllwww@mail.ru", "1", "January", "1989", "Moscow, Red Square, 3", "+79998887476"));
+  }
+
+  @Test (enabled = true)
+  public void testContactModification() {
+    List<ContactData> before = app.getContactHelper().getContactList();
+    int index = before.size()-1;
+    ContactData contact = new ContactData("Annabella", "", "Leonova", "Leo", "lllwww@mail.ru", "1", "January", "1989", "Moscow, Red Square, 3", "+79998887476");
+    app.getContactHelper().selectContact(index);
+    app.getContactHelper().initContactModification(index);
+    app.getContactHelper().fillContactForm(contact);
     app.getContactHelper().submitContactModification();
     app.getContactHelper().returnToContactsList();
-    int after = app.getContactHelper().getContactCount();
+    List<ContactData> after = app.getContactHelper().getContactList();
 
+    before.remove(index);
+    before.add(contact);
+    Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getId(), c2.getId());
+    before.sort(byId);
+    after.sort(byId);
     Assert.assertEquals(after, before);
-    app.logout();
+ //   app.logout();
 
   }
 }

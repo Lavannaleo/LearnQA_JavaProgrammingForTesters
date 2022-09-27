@@ -1,5 +1,6 @@
 package ru.stqa.pft.addressbook.tests;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -30,6 +31,8 @@ public class ContactModificationTests extends TestBase{
     app.getContactHelper().returnToContactsList();
     List<ContactData> after = app.getContactHelper().getContactList();
 
+    int id = Integer.parseInt(String.valueOf(before.get(index).getId()));
+    contact.setId(id);
     before.remove(index);
     before.add(contact);
     Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getId(), c2.getId());

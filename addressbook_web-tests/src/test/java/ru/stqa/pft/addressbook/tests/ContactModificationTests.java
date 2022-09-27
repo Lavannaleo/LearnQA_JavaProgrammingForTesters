@@ -31,8 +31,7 @@ public class ContactModificationTests extends TestBase{
     app.getContactHelper().returnToContactsList();
     List<ContactData> after = app.getContactHelper().getContactList();
 
-    int id = Integer.parseInt(String.valueOf(before.get(index).getId()));
-    contact.setId(id);
+    contact.setId(Integer.parseInt(String.valueOf(before.get(index).getId())));
     before.remove(index);
     before.add(contact);
     Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getId(), c2.getId());

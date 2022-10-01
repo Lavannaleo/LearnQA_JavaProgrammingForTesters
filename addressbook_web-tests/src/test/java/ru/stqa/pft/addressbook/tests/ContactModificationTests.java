@@ -1,6 +1,5 @@
 package ru.stqa.pft.addressbook.tests;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -12,24 +11,20 @@ import java.util.List;
 public class ContactModificationTests extends TestBase{
   @BeforeMethod
   public void ensureContact() {
-    app.getContactHelper().returnToContactsList();
-    if (! app.getContactHelper().isThereAContact()) {
-      app.getContactHelper().createContact(new ContactData("Anna", "Maria", "Leonidova", "Leo", "lll@mail.ru", "1", "January", "1989", "Moscow, Red Square, 3", "+79998887766"));
+    app.contact().returnToContactsList();
+    if (app.contact().list().size() == 0) {
+      app.contact().create(new ContactData("Anna", "Maria", "Leonidova", "Leo", "lll@mail.ru", "1", "January", "1989", "Moscow, Red Square, 3", "+79998887766"));
     }
-    app.getContactHelper().returnToContactsList();
+    app.contact().returnToContactsList();
   }
 
   @Test (enabled = true)
   public void testContactModification() {
-    List<ContactData> before = app.getContactHelper().getContactList();
+    List<ContactData> before = app.contact().list();
     int index = before.size()-1;
     ContactData contact = new ContactData("Annabella", "", "Leonova", "Leo", "lllwww@mail.ru", "1", "January", "1989", "Moscow, Red Square, 3", "+79998887476");
-    app.getContactHelper().selectContact(index);
-    app.getContactHelper().initContactModification(index);
-    app.getContactHelper().fillContactForm(contact);
-    app.getContactHelper().submitContactModification();
-    app.getContactHelper().returnToContactsList();
-    List<ContactData> after = app.getContactHelper().getContactList();
+    app.contact().modify(index, contact);
+    List<ContactData> after = app.contact().list();
 
     contact.setId(Integer.parseInt(String.valueOf(before.get(index).getId())));
     before.remove(index);

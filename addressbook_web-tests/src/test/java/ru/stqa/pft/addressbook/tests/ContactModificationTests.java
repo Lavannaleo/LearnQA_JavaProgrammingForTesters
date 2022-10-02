@@ -23,9 +23,10 @@ public class ContactModificationTests extends TestBase{
 
   @Test (enabled = true)
   public void testContactModification() {
+    app.contact().returnToContactsList();
     Contacts before = app.contact().all();
     ContactData modifiedContact = before.iterator().next();
-    ContactData contact = new ContactData().withId(modifiedContact.getId()).withFirstname("Anna").withMiddlename("Maria").withLastname("Leonidova").withNickname("Leo").withEmail("lll@mail.ru").withBday("1").withBmonth("January").withByear("1990").withAddress2("Moscow, Red Square, 3").withPhone2("+79998887766");
+    ContactData contact = new ContactData().withId(modifiedContact.getId()).withFirstname("Ann").withMiddlename("Maria").withLastname("Leonova").withNickname("Leo").withEmail("lll@mail.ru").withBday("1").withBmonth("January").withByear("1990").withAddress2("Moscow, Red Square, 3").withPhone2("+79998887766");
     app.contact().modify(contact);
     Contacts after = app.contact().all();
     Assert.assertEquals(after.size(), before.size());

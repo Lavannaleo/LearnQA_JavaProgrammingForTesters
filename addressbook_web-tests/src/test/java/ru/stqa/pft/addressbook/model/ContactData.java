@@ -6,11 +6,19 @@ public class ContactData {
   private String firstname;
   private String middlename;
   private String nickname;
+
+  private String allEmails;
+
   private String email;
+
+  private String email2;
+
+  private String email3;
+
    private String bday;
   private String bmonth;
   private String byear;
-  private String address2;
+  private String address;
    private String allPhones;
   private String home;
   private String mobile;
@@ -47,6 +55,20 @@ public class ContactData {
     return this;
   }
 
+  public ContactData withEmail2(String email) {
+    this.email2 = email;
+    return this;
+  }
+  public ContactData withEmail3(String email) {
+    this.email3 = email;
+    return this;
+  }
+
+  public ContactData withAllEmails(String allEmails) {
+    this.allEmails = allEmails;
+    return this;
+  }
+
   public ContactData withBday(String bday) {
     this.bday = bday;
     return this;
@@ -62,8 +84,8 @@ public class ContactData {
     return this;
   }
 
-  public ContactData withAddress2(String address2) {
-    this.address2 = address2;
+  public ContactData withAddress(String address) {
+    this.address = address;
     return this;
   }
 
@@ -104,8 +126,14 @@ public class ContactData {
     return nickname;
   }
 
-  public String getEmail() {
-    return email;
+  public String getEmail() {    return email;  }
+
+  public String getEmail2() {    return email2;  }
+
+  public String getEmail3() {    return email3;  }
+
+  public String getAllEmails() {
+    return allEmails;
   }
 
   public String getBday() {
@@ -120,8 +148,8 @@ public class ContactData {
     return byear;
   }
 
-  public String getAddress2() {
-    return address2;
+  public String getAddress() {
+    return address;
   }
 
   public String getAllPhones() {

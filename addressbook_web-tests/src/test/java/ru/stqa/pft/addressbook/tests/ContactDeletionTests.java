@@ -18,7 +18,7 @@ public class ContactDeletionTests extends TestBase{
   public void ensureContact(){
     app.contact().returnToContactsList();
     if (app.contact().all().size() == 0) {
-      app.contact().create(new ContactData().withFirstname("Anna").withMiddlename("Maria").withLastname("Leonidova").withNickname("Leo").withEmail("lll@mail.ru").withBday("1").withBmonth("January").withByear("1990").withAddress2("Moscow, Red Square, 3").withPhone2("+79998887766"));
+      app.contact().create(new ContactData().withFirstname("Anna").withMiddlename("Maria").withLastname("Leonidova").withNickname("Leo").withEmail("lll@mail.ru").withBday("1").withBmonth("January").withByear("1990").withAddress2("Moscow, Red Square, 3"));
     }
     app.contact().returnToContactsList();
   }

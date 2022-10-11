@@ -50,6 +50,7 @@ public class ContactHelper extends HelperBase{
     selectInList(By.name("bmonth"),contactData.getBmonth());
     type(By.name("byear"),contactData.getByear());
     type(By.name("address"),contactData.getAddress());
+    attach(By.name("photo"), contactData.getPhoto());
   }
 
   public void selectContactById(int id) {

@@ -1,0 +1,37 @@
+[
+  {
+    "lastname": "LastName 0",
+    "firstname": "FirstName 0",
+    "email": "email0@mail.ru",
+    "address": "City0,\nStreet 0,\nHouse 0,\nFlat 0",
+    "mobile": "+79995858580"
+  },
+  {
+    "lastname": "LastName 1",
+    "firstname": "FirstName 1",
+    "email": "email1@mail.ru",
+    "address": "City1,\nStreet 1,\nHouse 1,\nFlat 1",
+    "mobile": "+79995858581"
+  },
+  {
+    "lastname": "LastName 2",
+    "firstname": "FirstName 2",
+    "email": "email2@mail.ru",
+    "address": "City2,\nStreet 2,\nHouse 2,\nFlat 2",
+    "mobile": "+79995858582"
+  },
+  {
+    "lastname": "LastName 3",
+    "firstname": "FirstName 3",
+    "email": "email3@mail.ru",
+    "address": "City3,\nStreet 3,\nHouse 3,\nFlat 3",
+    "mobile": "+79995858583"
+  },
+  {
+    "lastname": "LastName 4",
+    "firstname": "FirstName 4",
+    "email": "email4@mail.ru",
+    "address": "City4,\nStreet 4,\nHouse 4,\nFlat 4",
+    "mobile": "+79995858584"
+  }
+]

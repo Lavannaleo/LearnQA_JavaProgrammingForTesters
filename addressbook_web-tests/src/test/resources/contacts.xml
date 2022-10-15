@@ -3,50 +3,35 @@
     <lastname>LastName 0</lastname>
     <firstname>FirstName 0</firstname>
     <email>email0@mail.ru</email>
-    <address>City0,
-Street 0,
-House 0,
-Flat 0</address>
+    <address>City0,Street 0,House 0,Flat 0</address>
     <mobile>+79995858580</mobile>
   </contact>
   <contact>
     <lastname>LastName 1</lastname>
     <firstname>FirstName 1</firstname>
     <email>email1@mail.ru</email>
-    <address>City1,
-Street 1,
-House 1,
-Flat 1</address>
+    <address>City1,Street 1,House 1,Flat 1</address>
     <mobile>+79995858581</mobile>
   </contact>
   <contact>
     <lastname>LastName 2</lastname>
     <firstname>FirstName 2</firstname>
     <email>email2@mail.ru</email>
-    <address>City2,
-Street 2,
-House 2,
-Flat 2</address>
+    <address>City2,Street 2,House 2,Flat 2</address>
     <mobile>+79995858582</mobile>
   </contact>
   <contact>
     <lastname>LastName 3</lastname>
     <firstname>FirstName 3</firstname>
     <email>email3@mail.ru</email>
-    <address>City3,
-Street 3,
-House 3,
-Flat 3</address>
+    <address>City3,Street 3,House 3,Flat 3</address>
     <mobile>+79995858583</mobile>
   </contact>
   <contact>
     <lastname>LastName 4</lastname>
     <firstname>FirstName 4</firstname>
     <email>email4@mail.ru</email>
-    <address>City4,
-Street 4,
-House 4,
-Flat 4</address>
+    <address>City4,Street 4,House 4,Flat 4</address>
     <mobile>+79995858584</mobile>
   </contact>
 </list>

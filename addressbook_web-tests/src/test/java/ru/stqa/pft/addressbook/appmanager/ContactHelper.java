@@ -40,17 +40,18 @@ public class ContactHelper extends HelperBase{
 
   public void fillContactForm(ContactData contactData) {
     type(By.name("firstname"),contactData.getFirstname());
-    type(By.name("middlename"),contactData.getMiddlename());
+//    type(By.name("middlename"),contactData.getMiddlename());
     type(By.name("lastname"),contactData.getLastname());
-    type(By.name("nickname"),contactData.getNickname());
+//    type(By.name("nickname"),contactData.getNickname());
     type(By.name("email"),contactData.getEmail());
-    type(By.name("email2"),contactData.getEmail2());
-    type(By.name("email3"),contactData.getEmail3());
-    selectInList(By.name("bday"),contactData.getBday());
-    selectInList(By.name("bmonth"),contactData.getBmonth());
-    type(By.name("byear"),contactData.getByear());
+//    type(By.name("email2"),contactData.getEmail2());
+//    type(By.name("email3"),contactData.getEmail3());
+//   selectInList(By.name("bday"),contactData.getBday());
+//   selectInList(By.name("bmonth"),contactData.getBmonth());
+//    type(By.name("byear"),contactData.getByear());
     type(By.name("address"),contactData.getAddress());
-    attach(By.name("photo"), contactData.getPhoto());
+    type(By.name("mobile"),contactData.getMobilePhone());
+//    attach(By.name("photo"), contactData.getPhoto());
   }
 
   public void selectContactById(int id) {

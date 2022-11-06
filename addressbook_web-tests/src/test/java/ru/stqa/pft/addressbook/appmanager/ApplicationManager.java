@@ -47,7 +47,7 @@ public class ApplicationManager {
     navigationHelper = new NavigationHelper(wd);
     contactHelper = new ContactHelper(wd);
     groupHelper = new GroupHelper(wd);
-    sessionHelper.login(properties.getProperty("adminLogin"), properties.getProperty("adminPassword"));
+    sessionHelper.login(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
   }
 
 

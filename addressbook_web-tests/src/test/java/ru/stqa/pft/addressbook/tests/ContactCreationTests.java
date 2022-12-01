@@ -57,11 +57,11 @@ public class ContactCreationTests extends TestBase{
   @Test(dataProvider = "validContactsFromJson")
   public void testContactCreation(ContactData contact) {
     app.contact().returnToContactsList();
-    Contacts before = app.contact().all();
+    Contacts before = app.db().contacts();
 //    File photo = new File("src/test/resources/я.png");
 //    ContactData contact = new ContactData().withFirstname("Anna").withLastname("Larinco").withMiddlename("Leonidova").withNickname("Leo").withEmail("lll@mail.ru").withBday("1").withBmonth("January").withByear("1989").withAddress("Moscow, Red Square, 3").withPhoto(photo);
     app.contact().create(contact);
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
     assertThat(after.size(), equalTo(before.size()+1));
     assertThat(after, equalTo(before.withAdded(contact.withId(after.stream().mapToInt((g) ->g.getId()).max().getAsInt()))));
   }

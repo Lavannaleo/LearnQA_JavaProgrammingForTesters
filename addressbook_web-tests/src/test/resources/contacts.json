@@ -19,19 +19,5 @@
     "email": "email2@mail.ru",
     "address": "City2,Street 2,House 2,Flat 2",
     "mobile": "+79995858582"
-  },
-  {
-    "lastname": "LastName 3",
-    "firstname": "FirstName 3",
-    "email": "email3@mail.ru",
-    "address": "City3,Street 3,House 3,Flat 3",
-    "mobile": "+79995858583"
-  },
-  {
-    "lastname": "LastName 4",
-    "firstname": "FirstName 4",
-    "email": "email4@mail.ru",
-    "address": "City4,Street 4,House 4,Flat 4",
-    "mobile": "+79995858584"
   }
 ]

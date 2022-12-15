@@ -18,6 +18,7 @@ public class ApplicationManager {
   private final Properties properties;
   public WebDriver wd;
   private RegistrationHelper registrationHelper;
+  private MailHelper mailHelper;
 
   public RegistrationHelper registration() {
     if (registrationHelper == null) {
@@ -73,5 +74,12 @@ public class ApplicationManager {
       wd.get(properties.getProperty("web.baseUrl"));
     }
     return wd;
+  }
+
+  public MailHelper mail() {
+    if (MailHelper == null) {
+      mailHelper = new MailHelper(this);
+    }
+    return mailHelper;
   }
 }

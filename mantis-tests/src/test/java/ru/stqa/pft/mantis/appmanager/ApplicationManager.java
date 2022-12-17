@@ -77,7 +77,7 @@ public class ApplicationManager {
   }
 
   public MailHelper mail() {
-    if (MailHelper == null) {
+    if (mailHelper == null) {
       mailHelper = new MailHelper(this);
     }
     return mailHelper;

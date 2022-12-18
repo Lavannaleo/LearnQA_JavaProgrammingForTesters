@@ -16,10 +16,11 @@ public class RegistrationHelper extends HelperBase {
     click(By.cssSelector("input[value='Зарегистрироваться'"));
   }
 
-  public void finish(String confirmationLink, String password) {
+  public void finish(String confirmationLink, String username, String password) {
     wd.get(confirmationLink);
-    type(By.name("password"),password);
-    type(By.name("password_confirm"),password);
-    click(By.cssSelector("input[value='Update User']"));
+    type(By.xpath("//*[@id=\"realname\"]"), username);
+    type(By.xpath("//*[@id=\"password\"]"),password);
+    type(By.xpath("//*[@id=\"password-confirm\"]"),password);
+    click(By.xpath("//*[@id=\"account-update-form\"]/fieldset/span/button"));
   }
 }

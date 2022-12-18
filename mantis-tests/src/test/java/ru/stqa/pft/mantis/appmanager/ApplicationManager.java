@@ -19,6 +19,7 @@ public class ApplicationManager {
   public WebDriver wd;
   private RegistrationHelper registrationHelper;
   private MailHelper mailHelper;
+  private FtpHelper ftp;
 
   public RegistrationHelper registration() {
     if (registrationHelper == null) {
@@ -74,6 +75,13 @@ public class ApplicationManager {
       wd.get(properties.getProperty("web.baseUrl"));
     }
     return wd;
+  }
+
+  public FtpHelper ftp() {
+    if (ftp == null) {
+      ftp = new FtpHelper(this);
+    }
+    return ftp;
   }
 
   public MailHelper mail() {
